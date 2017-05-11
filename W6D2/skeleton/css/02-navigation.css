@@ -7,7 +7,7 @@
 }
 
 .header-logo:hover {
-  background: black;
+  background: #000;
 }
 
 .header-list {
@@ -20,6 +20,5 @@
 }
 
 .header-list > li:hover {
-  cursor: pointer;
-  background: black;
+  background: #000;
 }
