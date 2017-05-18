@@ -15,6 +15,12 @@
   padding-left: 5px;
 }
 
+.currency-option:hover {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .rates-list {
   padding-top: 10px;
 }
