@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
     JSON.parse(localStorage.state) : {};
   const store = configureStore(preloadedState);
 
+  store.dispatch = addLoggingToDispatch(store);
+
   const root = document.getElementById('content');
   ReactDOM.render(<Root store={store} />, root);
 });
+
+const addLoggingToDispatch = (store) => {
+  const OGDispatch = store.dispatch;
+  return(action) => {
+    console.log(store.getState());
+    console.log(action);
+    OGDispatch(action);
+    console.log(store.getState());
+  }
+}
